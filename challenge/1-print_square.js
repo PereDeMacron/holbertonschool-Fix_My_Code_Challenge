@@ -15,11 +15,11 @@ if (process.argv.length <= 2) {
 
 const size = parseInt(process.argv[2], 10);
 
-if (isNaN(size)) {
+if (isNaN(size) || size <= 0) {
   process.stderr.write("Invalid size\n");
   process.exit(1);
 }
 
 for (let i = 0; i < size; i++) {
-  console.log("#".repeat(size));
+  console.log('#'.repeat(size));
 }
